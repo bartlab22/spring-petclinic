@@ -5,15 +5,15 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-# - stage: Run_CI_Tests
-#   jobs:
-#     - job: 
-#       steps:
-#         # We're just doing a build image here to 
-#         # run all the tests for simplicity sake
-#         #- script: ./mvnw spring-boot:build-image
-#         - script: ./mvnw spring-boot:build-info
-#           displayName: 'Build Spring Pet Clinic'
+- stage: Run_CI_Tests
+  jobs:
+    - job: 
+      steps:
+        # We're just doing a build image here to 
+        # run all the tests for simplicity sake
+        #- script: ./mvnw spring-boot:build-image
+        - script: ./mvnw spring-boot:build-info
+          displayName: 'Build Spring Pet Clinic'
 - stage: Image_Build
   jobs:
     - job: Image_Build_Job
