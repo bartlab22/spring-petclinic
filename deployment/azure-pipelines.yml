@@ -99,6 +99,7 @@ stages:
       runOnce: 
         deploy:
           steps:
+            - checkout: self
             - task: HelmDeploy@0
               inputs:
                 connectionType: 'Kubernetes Service Connection'
