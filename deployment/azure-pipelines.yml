@@ -1,5 +1,5 @@
 trigger:
-- main
+- Demo-Pipeline
 
 pool:
   vmImage: ubuntu-latest
