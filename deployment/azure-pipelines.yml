@@ -105,4 +105,6 @@ stages:
                 command: 'upgrade'
                 chartType: 'FilePath'
                 chartPath: 'deployment/chart/spring-petclinic'
-                overrideValues: image.tag=$(imageSHA)
+                releaseName: 'spc'
+                overrideValues: 'image.tag=$(imageSHA)'
+                arguments: '--create-namespace'
